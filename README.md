@@ -4,18 +4,20 @@ Traditional approaches to predicting mRNA subcellular localization often fail to
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/abrarrahmanabir/DeepRNA-Twist.git
-   cd DeepRNA-Twist
+   git clone https://github.com/abrarrahmanabir/LOCAS.git
+   cd LOCAS
 
 
 2. **Install dependencies**:
 
    ```bash
-   pip install numpy tensorflow torch scikit-learn pandas transformers keras tqdm
-
+   pip install torch torchvision tqdm matplotlib pandas numpy scikit-learn
+   ```
 
 ### How to Train
-1. **Train the Model**:
+1. **Prepare Data**:
+`Data` folder contains the dataset with RNA sequences with localization labels. If we want to use your own dataset, put this is `Data` folder.
+2. **Train the Model**:
 To start the training process, execute the following command:
 
    ```bash
@@ -24,18 +26,18 @@ To start the training process, execute the following command:
 ## How to Run Inference
 
 ### Requirements:
-- Pre-trained model: `trained_DeepRNAtwist.h5`
-- Input dataset: `Data/combined_full.csv`
-- Language model embeddings must be loaded as part of the inference process : `emb.pkl`.
-- You can find them in : https://drive.google.com/drive/folders/1giw02VxTG_Eg2HzNyW0xmtWtfjPoBskA?usp=sharing
+- Pre-trained model: `Trained_models` folder contains the pretrained encoder and classifier.
+- Input dataset: `Data/merged_output.csv`
+- Language model embeddings must be loaded as part of the inference process.
+
 
 ### Steps to Run Inference:
 
 1. **Prepare the Input Data**:
-   Ensure that the input file `Data/combined_full.csv` is available in the repository's `Data/` folder. This CSV file contains the RNA sequence and angles for which you want to predict torsion angles.
+   Ensure that the input file `Data/merged_output.csv` is available in the repository's `Data/` folder. This CSV file contains the RNA sequence and localization labels.
 
 2. **Load the Pre-trained Model**:
-   The pre-trained model `trained_DeepRNAtwist.h5` is included in the repository. The inference script will load this model automatically to perform predictions.
+   The pre-trained models  are included in the `Trained_models`. The inference script will load this model automatically to perform predictions.
 
 3. **Load Language Model Embeddings**:
    For the inference process, the necessary language model embeddings  `emb.pkl` have to be loaded for prediction.
@@ -49,7 +51,7 @@ To start the training process, execute the following command:
 
 
 ### Model Architecture
-![Model Architecture](model.jpg)
+![Model Architecture](overall_training.jpg)
 
 
 
