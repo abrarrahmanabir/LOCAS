@@ -51,7 +51,7 @@ To start the training process, execute the following command:
 
 
 ### Model Architecture
-![Model Architecture](overall_training.jpg)
+![Model Architecture](overall_training.png)
 
 
 
