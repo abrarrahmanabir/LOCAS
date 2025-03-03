@@ -6,6 +6,7 @@ Traditional approaches to predicting mRNA subcellular localization often fail to
    ```bash
    git clone https://github.com/abrarrahmanabir/LOCAS.git
    cd LOCAS
+   
 
 
 2. **Install dependencies**:
@@ -22,18 +23,21 @@ To start the training process, execute the following command:
 
    ```bash
    python train_final.py
+```
 
 ## How to Run Inference
 Run the following command to perform inference : 
 
    ```bash
-   python inference_final.py 
+   python inference_final.py
+```
 
 ### RiNALMo Embedding Generation
 Run the following command to generate language model embeddings for any dataset.
 
    ```python
    python emb_gen_final.py
+```
 
 ### Model Architecture
 ![Model Architecture](overall_training.png)
