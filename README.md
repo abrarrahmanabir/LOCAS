@@ -13,15 +13,17 @@ Traditional approaches to predicting mRNA subcellular localization often fail to
    ```bash
    pip install torch torchvision tqdm matplotlib pandas numpy scikit-learn
    ```
+### RiNALMo Embedding Generation
+   ```bash
+   python train_final.py
+
 
 ### How to Train
-1. **Prepare Data**:
-`Data` folder contains the dataset with RNA sequences with localization labels. If we want to use your own dataset, put this is `Data` folder.
-2. **Train the Model**:
+We give an example dataset named 'dataset.csv' and corresponding language model embeddings in 'dataset.npy'.
 To start the training process, execute the following command:
 
    ```bash
-   python main.py
+   python train_final.py
 
 ## How to Run Inference
 
