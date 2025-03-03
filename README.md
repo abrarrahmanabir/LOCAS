@@ -13,9 +13,7 @@ Traditional approaches to predicting mRNA subcellular localization often fail to
    ```bash
    pip install torch torchvision tqdm matplotlib pandas numpy scikit-learn
    ```
-### RiNALMo Embedding Generation
-   ```python
-   python train_final.py
+
 
 
 ### How to Train
@@ -26,31 +24,16 @@ To start the training process, execute the following command:
    python train_final.py
 
 ## How to Run Inference
+Run the following command to perform inference : 
 
-### Requirements:
-- Pre-trained model: `Trained_models` folder contains the pretrained encoder and classifier.
-- Input dataset: `Data/merged_output.csv`
-- Language model embeddings must be loaded as part of the inference process.
-
-
-### Steps to Run Inference:
-
-1. **Prepare the Input Data**:
-   Ensure that the input file `Data/merged_output.csv` is available in the repository's `Data/` folder. This CSV file contains the RNA sequence and localization labels.
-
-2. **Load the Pre-trained Model**:
-   The pre-trained models  are included in the `Trained_models`. The inference script will load this model automatically to perform predictions.
-
-3. **Load Language Model Embeddings**:
-   For the inference process, the necessary language model embeddings  `emb.pkl` have to be loaded for prediction.
-
-4. **Run the Inference**:
-   To perform inference on the provided dataset, run the following command:
-   
    ```bash
-   python inference.py 
+   python inference_final.py 
 
+### RiNALMo Embedding Generation
+Run the following command to generate language model embeddings for any dataset.
 
+   ```python
+   python emb_gen_final.py
 
 ### Model Architecture
 ![Model Architecture](overall_training.png)
