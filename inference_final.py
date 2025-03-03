@@ -511,11 +511,11 @@ def compute_multilabel_metrics(true_labels, pred_probs, threshold=0.5):
     absolute_false = hamming_loss(true_labels, pred_labels)
     
     return {
-        "Aiming (Precision)": aiming,
-        "Coverage (Recall)": coverage,
-        "Accuracy (Jaccard)": accuracy,
-        "Absolute-True (Subset Accuracy)": absolute_true,
-        "Absolute-False (Hamming Loss)": absolute_false
+        "Aiming ": aiming,
+        "Coverage  ": coverage,
+        "Accuracy ": accuracy,
+        "Absolute-True ": absolute_true,
+        "Absolute-False ": absolute_false
     }
 
 
