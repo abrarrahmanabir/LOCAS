@@ -14,7 +14,7 @@ Traditional approaches to predicting mRNA subcellular localization often fail to
    pip install torch torchvision tqdm matplotlib pandas numpy scikit-learn
    ```
 ### RiNALMo Embedding Generation
-   ```bash
+   ```python
    python train_final.py
 
 
