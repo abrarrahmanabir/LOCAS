@@ -15,7 +15,8 @@ Traditional approaches to predicting mRNA subcellular localization often fail to
    pip install torch torchvision tqdm matplotlib pandas numpy scikit-learn
    ```
 
-
+## Dataset Format
+The dataset should have a column 'Sequence' that contains the RNA sequence and the other columns are the locations - 'Chromatin', 'Cytoplasm', 'Cytosol', 'Exosome', 'Membrane', 'Nucleolus','Nucleoplasm' , 'Nucleus', 'Ribosome' and they are one hot encoded.
 
 ### How to Train
 We give an example dataset named 'dataset.csv' and corresponding language model embeddings in 'dataset.npy'.
@@ -26,14 +27,14 @@ To start the training process, execute the following command:
 ```
 
 ## How to Run Inference
-Run the following command to perform inference : 
+Run the following command to perform inference with the test dataset 'testsetv2.csv' and corresponding embeddings are in 'test_embeddings.npy'. 
 
    ```bash
    python inference_final.py
 ```
 
 ### RiNALMo Embedding Generation
-Run the following command to generate language model embeddings for any dataset.
+Run the following command to generate language model embeddings for any custom dataset. Put the dataset in place of 'dataset.csv' with the required format and it will generate .npy file with the embeddings. You can use it for training or inference. We have provided an example 'dataset.csv' and 'dataset.npy'.
 
    ```python
    python emb_gen_final.py
