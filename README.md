@@ -1,5 +1,11 @@
 ## LOCAS: Multilabel RNA Localization with Supervised Contrastive Learning
 Traditional approaches to predicting mRNA subcellular localization often fail to address the complexity of multiple compartmentalization, limiting biological insights. While recent multi-label models have shown progress, challenges persist in accurately capturing intricate localization patterns. We introduce LOCAS (Localization with Supervised Contrastive Learning), a novel framework that in corporates an RNA language model to generate initial embeddings and supervised contrastive learning (SCL) to identify distinct RNA clusters based on sequence similarity. LOCAS also uses a multi-label classification head (ML-Decoder) with cross-attention, enabling accurate multi-compartment predic tions. Our contributions include: (1) the first integration of RNA language models to create a nuanced embedding space for RNA sequences, (2) an SCL approach that detects overlapping localization pat terns with a multi-label similarity threshold, and (3) a multi-label classification head tailored for RNA localization. Comprehensive experiments, including extensive ablation studies and optimized threshold tuning, confirm LOCAS achieves state-of-the-art accuracy across all metrics, setting a new standard in multi-compartment mRNA localization.
+
+
+### Model Architecture
+![Model Architecture](model.jpg)
+
+
 ### Installation
 
 1. **Clone the repository**:
@@ -39,9 +45,6 @@ Run the following command to generate language model embeddings for any custom d
    ```python
    python emb_gen_final.py
 ```
-
-### Model Architecture
-![Model Architecture](model.jpg)
 
 
 
