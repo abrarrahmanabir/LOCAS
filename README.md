@@ -41,7 +41,7 @@ Run the following command to generate language model embeddings for any custom d
 ```
 
 ### Model Architecture
-![Model Architecture](model.pdf)
+![Model Architecture](model.jpg)
 
 
 
