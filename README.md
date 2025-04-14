@@ -33,7 +33,7 @@ To start the training process, execute the following command:
 ```
 
 ## How to Run Inference
-Run the following command to perform inference with the test dataset 'testsetv2.csv' and corresponding embeddings are in 'test_embeddings.npy'. 
+Run the following command to perform inference with the test set of RNALocate v2.0 dataset and corresponding embeddings are saved in 'test_embeddings.npy'. 
 
    ```bash
    python inference_final.py
